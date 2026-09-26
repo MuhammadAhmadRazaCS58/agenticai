@@ -7,7 +7,7 @@ class DatabaseUtil:
         self.db_config = db_config
 
         try: 
-            self.connection = psycopg2.connect(**db_config) 
+           self.connection = psycopg2.connect(**db_config, sslmode="require")
 
         except Exception as e:
             print(f"Error connecting to the database: {e}")
