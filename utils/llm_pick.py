@@ -13,13 +13,15 @@ def pick_llm(level: str):
 
     elif level.lower() == "medium":
         return ChatMistralAI(
-            model="mistral-small-2603",
+            # model="mistral-small-2603",
+            model="ministral-3b-2512",
             temperature=0
         )
 
     elif level.lower() == "high":
         return ChatMistralAI(
-            model="mistral-large-2512",
+            # model="mistral-large-2512",
+            model="ministral-3b-2512",
             temperature=0
         )
 
